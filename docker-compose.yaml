@@ -1,0 +1,30 @@
+version: '3'
+services:
+  selenoid:
+    network_mode: bridge
+    image: aerokube/selenoid:latest-release
+    volumes:
+      - "./etc:/etc/selenoid"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./video:/opt/selenoid/video"
+      - "./logs:/opt/selenoid/logs"
+    environment:
+      - OVERRIDE_VIDEO_OUTPUT_DIR=$PWD/video
+    command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video", "-log-output-dir", "/opt/selenoid/logs"]
+    ports:
+      - "4444:4444"
+  
+  ggr:
+    network_mode: bridge
+    container_name: ggr
+    restart: always
+    image: aerokube/ggr:latest-release
+    ports:
+      - 4445:4445
+    volumes:
+      - "./:/etc/grid-router:ro"
+      - "./quota/:/etc/grid-router/quota:ro"
+    command: ["-listen",":4445","-guests-allowed", "-guests-quota","test"]
+    links:
+      - selenoid
+  

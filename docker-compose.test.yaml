@@ -1,0 +1,34 @@
+version: '3'
+networks:
+  sele:
+    external:
+      name: sele  # This assumes network is already created
+services:
+  selenoid:
+    container_name: sele
+    networks:
+      sele: null
+    image: aerokube/selenoid:latest-release
+    volumes:
+      - "./etc:/etc/selenoid"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./video:/opt/selenoid/video"
+      - "./logs:/opt/selenoid/logs"
+    environment:
+      - OVERRIDE_VIDEO_OUTPUT_DIR=$PWD/video
+    command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video", "-log-output-dir", "/opt/selenoid/logs", "-container-network", "selenoid"]
+    ports:
+      - "4444:4444"
+  
+  ggr:
+    networks:
+      sele: null
+    container_name: ggr
+    restart: always
+    image: aerokube/ggr:latest-release
+    ports:
+      - 4445:4445
+    volumes:
+      - "./:/etc/grid-router:ro"
+      - "./quota/:/etc/grid-router/quota:ro"
+    command: ["-listen",":4445","-guests-allowed", "-guests-quota","test"]

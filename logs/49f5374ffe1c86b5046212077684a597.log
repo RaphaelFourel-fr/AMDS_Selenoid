@@ -1,0 +1,19 @@
+2022-07-12T15:45:58.473534848Z 2022/07/12 15:45:58 [INIT] [Listening on :7070]
+2022-07-12T15:45:58.581815084Z 20
+2022-07-12T15:45:58.637578543Z Waiting X server...
+2022-07-12T15:45:58.840275841Z Waiting X server...
+2022-07-12T15:45:58.867368200Z Logging to: /dev/null
+2022-07-12T15:45:58.957312781Z Waiting X server...
+2022-07-12T15:45:59.072165527Z Waiting X server...
+2022-07-12T15:45:59.182481294Z Waiting X server...
+2022-07-12T15:45:59.323242414Z Waiting X server...
+2022-07-12T15:45:59.451200006Z Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 4444
+2022-07-12T15:45:59.451228899Z All remote connections are allowed. Use an allowlist instead!
+2022-07-12T15:45:59.451233938Z Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+2022-07-12T15:45:59.471007998Z 
+2022-07-12T15:45:59.471034246Z  --- x11vnc loop: 1 ---
+2022-07-12T15:45:59.471039163Z 
+2022-07-12T15:45:59.475519660Z ChromeDriver was started successfully.
+2022-07-12T15:45:59.976654648Z  --- x11vnc loop: waiting for: 103
+2022-07-12T15:45:59.976708714Z 
+2022-07-12T15:46:00.259011524Z PORT=5900

@@ -1,0 +1,111 @@
+{
+    "chrome": {
+        "default": "101.0",
+        "versions": {
+            "100.0": {
+                "image": "selenoid/chrome:100.0",
+                "port": "4444",
+                "path": "/",
+                "tmpfs": {
+                    "/tmp": "size=128m"
+                },
+                "volumes": [
+                    "/dev/shm:/dev/shm"
+                ]
+            },
+            "101.0": {
+                "image": "selenoid/chrome:101.0",
+                "port": "4444",
+                "path": "/",
+                "tmpfs": {
+                    "/tmp": "size=128m"
+                },
+                "volumes": [
+                    "/dev/shm:/dev/shm"
+                ]
+            }
+        }
+    },
+    "firefox": {
+        "default": "101.0",
+        "versions": {
+            "100.0": {
+                "image": "selenoid/firefox:100.0",
+                "port": "4444",
+                "path": "/wd/hub",
+                "tmpfs": {
+                    "/tmp": "size=128m"
+                },
+                "volumes": [
+                    "/dev/shm:/dev/shm"
+                ]
+            },
+            "101.0": {
+                "image": "selenoid/firefox:101.0",
+                "port": "4444",
+                "path": "/wd/hub",
+                "tmpfs": {
+                    "/tmp": "size=128m"
+                },
+                "volumes": [
+                    "/dev/shm:/dev/shm"
+                ]
+            }
+        }
+    },
+    "edge": {
+        "default": "102.0",
+        "versions": {
+            "101.0": {
+                "image": "browsers/edge:101.0",
+                "port": "4444",
+                "privileged": true,
+                "path": "/",
+                "tmpfs": {
+                    "/tmp": "size=128m"
+                },
+                "volumes": [
+                    "/dev/shm:/dev/shm"
+                ]
+            },
+            "102.0": {
+                "image": "browsers/edge:102.0",
+                "port": "4444",
+                "path": "/",
+                "tmpfs": {
+                    "/tmp": "size=128m"
+                },
+                "volumes": [
+                    "/dev/shm:/dev/shm"
+                ]
+            }
+        }
+    },
+    "opera": {
+        "default": "88.0",
+        "versions": {
+            "86.0": {
+                "image": "selenoid/opera:86.0",
+                "port": "4444",
+                "path": "/",
+                "tmpfs": {
+                    "/tmp": "size=128m"
+                },
+                "volumes": [
+                    "/dev/shm:/dev/shm"
+                ]
+            },
+            "88.0": {
+                "image": "selenoid/opera:88.0",
+                "port": "4444",
+                "path": "/",
+                "tmpfs": {
+                    "/tmp": "size=128m"
+                },
+                "volumes": [
+                    "/dev/shm:/dev/shm"
+                ]
+            }
+        }
+    }
+}

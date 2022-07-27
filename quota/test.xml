@@ -1,0 +1,50 @@
+<qa:browsers xmlns:qa="urn:config.gridrouter.qatools.ru">
+    <browser name="chrome" defaultVersion="101.0">
+        <version number="100.0">
+            <region name="cluster">
+                <host name="selenoid" port="4444" vnc="ws://selenoid:4444/vnc" count="1"></host>
+            </region>
+        </version>
+        <version number="101.0">
+            <region name="cluster">
+                <host name="selenoid" port="4444" vnc="ws://selenoid:4444/vnc" count="1"></host>
+            </region>
+        </version>
+    </browser>
+    <browser name="firefox" defaultVersion="101.0">
+        <version number="100.0">
+            <region name="cluster">
+                <host name="selenoid" port="4444" vnc="ws://selenoid:4444/vnc" count="1"></host>
+            </region>
+        </version>
+        <version number="101.0">
+            <region name="cluster">
+                <host name="selenoid" port="4444" vnc="ws://selenoid:4444/vnc" count="1"></host>
+            </region>
+        </version>
+    </browser>
+    <browser name="edge" defaultVersion="102.0">
+        <version number="101.0">
+            <region name="cluster">
+                <host name="selenoid" port="4444" vnc="ws://selenoid:4444/vnc" count="1"></host>
+            </region>
+        </version>
+        <version number="102.0">
+            <region name="cluster">
+                <host name="selenoid" port="4444" vnc="ws://selenoid:4444/vnc" count="1"></host>
+            </region>
+        </version>
+    </browser>
+    <browser name="opera" defaultVersion="88.0">
+        <version number="86.0">
+            <region name="cluster">
+                <host name="selenoid" port="4444" vnc="ws://selenoid:4444/vnc" count="1"></host>
+            </region>
+        </version>
+        <version number="88.0">
+            <region name="cluster">
+                <host name="selenoid" port="4444" vnc="ws://selenoid:4444/vnc" count="1"></host>
+            </region>
+        </version>
+    </browser>
+</qa:browsers>
